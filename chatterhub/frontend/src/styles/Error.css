@@ -1,0 +1,55 @@
+.error-page {
+  background: #f9fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-content {
+  text-align: center;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  max-width: 480px;
+  width: 100%;
+}
+
+.error-content h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #3f4771;
+}
+
+.error-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #3f4771;
+}
+
+.error-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+button.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: #3f4771;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background: #2e355b;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}

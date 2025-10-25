@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3f4771; /* theme primary */
+  color: white;
+}
+
+/* Brand section (logo + text) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4081; /* chatterhub pink */
+  text-decoration: none;
+}
+
+/* Message logo/icon beside brand */
+.navbar-brand svg,
+.navbar-brand img {
+  color: #ff4081; /* pink logo */
+  width: 28px;
+  height: 28px;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff79b0; /* lighter pink hover */
+}
+
+/* Buttons */
+.navbar-links button {
+  margin-left: 1rem;
+  background: #ff4081;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px; /* rounded */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links button:hover {
+  background-color: #ff79b0; /* lighter pink on hover */
+}

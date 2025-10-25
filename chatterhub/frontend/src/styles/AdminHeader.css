@@ -1,0 +1,26 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3f4771;
+  color: #fff;
+}
+
+.admin-header .btn-danger {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.admin-header .btn-danger:hover {
+  background-color: #d62828;
+}
+
+.admin-name {
+  margin-right: 1rem;
+  font-weight: bold;
+}

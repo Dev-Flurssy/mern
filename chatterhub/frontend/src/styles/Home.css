@@ -1,0 +1,222 @@
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay starts transparent, fades in pink on hover */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 64, 129, 0); /* transparent initially */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 1.5s ease-in-out;
+}
+
+/* On hover, overlay becomes semi-pink */
+.hero-section:hover .hero-overlay {
+  background: rgba(255, 64, 129, 0.65);
+}
+
+/* Hero Text */
+.hero-text {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+  color: #fff; /* default white text */
+  transition: color 1.2s ease-in-out;
+}
+
+/* On hover, change text color */
+.hero-section:hover .hero-text {
+  color: #ffebf2; /* softer pink-white */
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-buttons button {
+  width: 160px; /* fixed equal width */
+  height: 48px; /* fixed equal height */
+  font-weight: 600; /* bold */
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px; /* rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Get Started: Pink background, white text */
+.btn-primary {
+  background-color: #ff4081;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ff79b0; /* lighter pink on hover */
+}
+
+/* Learn More: White background, pink border/text */
+.btn-secondary {
+  background-color: #fff;
+  color: #ff4081;
+  border: 2px solid #ff4081;
+}
+
+.btn-secondary:hover {
+  background-color: #c60055; /* soft faint pink */
+  color: #ffebf2;
+  border-color: #c60055;
+}
+
+/* FEATURES SECTION */
+.features-section {
+  padding: 4rem 2rem;
+  background: #fff0f6; /* light pink background */
+  text-align: center;
+}
+
+.features-section h2 {
+  color: #ff4081; /* accent pink */
+  margin-bottom: 2rem;
+}
+
+.features-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scrollbar-width: none;
+}
+
+.features-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-card {
+  min-width: 260px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 64, 129, 0.2); /* pinkish shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 64, 129, 0.3);
+}
+
+.feature-card h3 {
+  color: #ff4081; /* pink accent */
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #757575;
+}
+
+/* HOW IT WORKS */
+.howitworks-section {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.howitworks-section h2 {
+  color: #3f4771;
+  margin-bottom: 2rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+  color: #212121;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  background: #ff4081;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-overlay {
+  background: rgba(63, 71, 113, 0.7);
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-accent {
+  background: #ff4081; /* matches step number */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-accent:hover {
+  background: #c60055;
+}

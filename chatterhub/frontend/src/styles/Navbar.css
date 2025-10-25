@@ -1,0 +1,94 @@
+/* Header container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3f4771; /* primary.main */
+  padding: 1rem 2rem;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid #2e355b; /* primary.dark */
+}
+
+/* Branding */
+.navbar-brand h1 {
+  color: #ff4081; /* secondary.main */
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-brand h1:hover {
+  color: #ff79b0; /* secondary.light */
+}
+
+/* Navigation links container */
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Base nav button/link style */
+.nav-btn {
+  text-decoration: none;
+  color: #fff; /* primary.contrastText */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s, transform 0.2s;
+}
+
+/* Hover effect for all buttons/links */
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ff4081; /* secondary.main */
+  color: #ff4081;
+  transform: translateY(-2px);
+}
+
+/* Active effect */
+.nav-btn:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/* Themed buttons */
+.signup-btn {
+  background-color: #ff79b0; /* secondary.light */
+  border: 1px solid #ff79b0;
+  color: #000; /* secondary.contrastText */
+}
+.signup-btn:hover {
+  background-color: #ff4081; /* secondary.main */
+  border-color: #c60055; /* secondary.dark */
+  color: #fff;
+}
+
+.profile-btn {
+  background-color: #ff4081; /* secondary.main */
+  border: 1px solid #ff4081;
+  color: #fff;
+}
+.profile-btn:hover {
+  background-color: #c60055; /* secondary.dark */
+  border-color: #ff79b0; /* secondary.light */
+  color: #fff;
+}
+
+.logout-btn {
+  background-color: #f44336; /* error.main */
+  border: 1px solid #f44336;
+  color: #fff;
+}
+.logout-btn:hover {
+  background-color: #c82333; /* darker error */
+  border-color: #a31621;
+  color: #fff;
+}

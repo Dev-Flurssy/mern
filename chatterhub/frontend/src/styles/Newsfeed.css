@@ -1,0 +1,26 @@
+/* Newsfeed.css */
+
+.newsfeed-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+.newsfeed-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.newsfeed-divider {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1rem 0;
+}

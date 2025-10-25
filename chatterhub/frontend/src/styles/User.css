@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #007bff;
+}
+
+.users-page {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.loading {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.user-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px var(--card-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover .avatar {
+  transform: scale(1.05);
+}
+
+.user-info h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.user-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.2rem 0;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .users-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-card {
+    width: 90%;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+}
+
+.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --primary-color: #66b2ff;
+}

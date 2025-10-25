@@ -1,0 +1,79 @@
+.homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 80vh;
+}
+
+.homepage h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3f4771;
+}
+
+.homepage p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.homepage-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.homepage-nav .btn-secondary,
+.homepage-nav .btn-danger {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #3f4771;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a5f8d;
+}
+
+.btn-danger {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #ff7875;
+}
+
+.homepage-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.homepage-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .homepage-nav {
+    flex-direction: column;
+  }
+
+  .homepage-nav .btn-secondary,
+  .homepage-nav .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+}
