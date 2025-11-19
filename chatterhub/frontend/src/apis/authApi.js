@@ -1,6 +1,6 @@
 const AUTH_BASE = "/api/auth";
 
-// Unified response handler
+/** Unified response handler */
 const handleResponse = async (response) => {
   if (!response.ok) {
     let errorMessage;
@@ -15,7 +15,7 @@ const handleResponse = async (response) => {
   return response.json();
 };
 
-// Signup a new user
+/** Sign up a new user */
 export const signup = async (user) => {
   const response = await fetch(`${AUTH_BASE}/signup`, {
     method: "POST",
@@ -28,7 +28,7 @@ export const signup = async (user) => {
   return handleResponse(response);
 };
 
-// Signin an existing user
+/** Sign in existing user */
 export const signin = async (user) => {
   const response = await fetch(`${AUTH_BASE}/signin`, {
     method: "POST",
@@ -42,6 +42,7 @@ export const signin = async (user) => {
 
   const data = await handleResponse(response);
 
+  // Store JWT and user in localStorage
   if (typeof window !== "undefined") {
     localStorage.setItem("jwt", JSON.stringify(data));
   }
@@ -49,7 +50,7 @@ export const signin = async (user) => {
   return data;
 };
 
-// Signout the user
+/** Sign out */
 export const signout = async () => {
   const response = await fetch(`${AUTH_BASE}/signout`, {
     method: "GET",
@@ -61,35 +62,34 @@ export const signout = async () => {
     throw new Error(`Signout failed: ${errorText}`);
   }
 
-  const data = await response.text(); // or .json() if your backend returns JSON
-
-  if (typeof window !== "undefined") {
-    localStorage.removeItem("jwt");
-  }
-
-  return data;
+  if (typeof window !== "undefined") localStorage.removeItem("jwt");
+  return response.json();
 };
 
-// Store JWT manually
+/** Store JWT manually */
 export const authenticate = (jwt, cb) => {
   if (typeof window !== "undefined") {
     localStorage.setItem("jwt", JSON.stringify(jwt));
+    cb && setTimeout(cb, 50); // ensure callback runs after storage
   }
-  cb && cb();
 };
 
-// Retrieve JWT from localStorage
+/** Check if user is authenticated */
 export const isAuthenticated = () => {
   if (typeof window === "undefined") return false;
-  const jwt = localStorage.getItem("jwt");
-  return jwt ? JSON.parse(jwt) : false;
+
+  try {
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    return jwt ? jwt : false;
+  } catch (error) {
+    console.error("Invalid JWT in localStorage:", error);
+    return false;
+  }
 };
 
-// Clear JWT and signout
+/** Clear JWT and sign out */
 export const clearJWT = async (cb) => {
-  if (typeof window !== "undefined") {
-    localStorage.removeItem("jwt");
-  }
+  if (typeof window !== "undefined") localStorage.removeItem("jwt");
 
   try {
     await signout();
